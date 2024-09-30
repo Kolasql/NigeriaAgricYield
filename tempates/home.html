@@ -1,3 +1,27 @@
-<h1>
-Hello World
-</h1>
+<body>
+    <div class = "login">
+       <h1>Nigerian Agricultural Yield Prediction</h>
+   
+        <!-- Main Input For Receiving Query to our Ml -->
+       <form action="{{ url_for("predict")}}"method = "post">
+         <input type = "text" name = "Year" placeholder= "Year" required = "required" /><br>
+           <input type = "text" name = "Tractors" placeholder= "Tractors" required = "required" /><br>
+           <input type = "text" name = "Agric_land_percent" placeholder= "Agric_land_percent" required = "required" /><br>
+           <input type = "text" name = "fertilizer_usage" placeholder= "fertilizer_usage" required = "required" /><br>
+           <input type = "text" name = "gdp_percent" placeholder= "gdp_percent" required = "required" /><br>
+           <input type = "text" name = "co2_emissions" placeholder= "co2_emissions" required = "required" /><br>
+           <input type = "text" name = "methane_emissions" placeholder= "methane_emissions" required = "required" /><br>
+           <input type = "text" name = "Female_employment" placeholder= "Female_employment" required = "required" /><br>
+   
+     
+           <button type = "suubmit" class = btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+   
+      <br>
+      <br>
+   
+    </div>
+    {{prediction_text}}
+   
+   </body>
+   </html>
